@@ -1,0 +1,25 @@
+<div>
+  <div class="row w-25">
+    <div class="mb-3 div">
+      <label class="form-label" for="name">Title of film:</label>
+      <input type="text" [(ngModel)]="movieName" name="movieName" class="form-control">
+    </div>
+    <button (click)="searchMovie()" class="btn btn-primary">Search</button>
+  </div>
+
+  <div class="container">
+    <div *ngIf="movie">
+      <h2>{{movie.Title}}</h2>
+      <ul>
+        <li><strong>Year:&nbsp;</strong>{{movie.Year}}</li>
+        <li><strong>Rating:&nbsp;</strong>{{movie.imdbRating}}</li>
+        <li><strong>Duration:&nbsp;</strong>{{movie.Runtime}}</li>
+        <li><strong>Director:&nbsp;</strong>{{movie.Director}}</li>
+        <li><strong>Actors:&nbsp;</strong>{{movie.Actors}}</li>
+      </ul>
+      <div *ngIf="movie.Poster!=='N/A'" class="poster">
+        <img src={{movie.Poster}} alt={{movie.Title}}>
+      </div>
+    </div>
+  </div>
+</div>

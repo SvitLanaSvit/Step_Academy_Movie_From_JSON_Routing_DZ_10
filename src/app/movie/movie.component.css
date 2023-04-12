@@ -1,0 +1,21 @@
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.div{
+  padding: 0;
+}
+
+.poster{
+  display: flex;
+  justify-content: center;
+}
+
+ul{
+  list-style-type: none;
+}
+
+h2{
+  text-align: center;
+}

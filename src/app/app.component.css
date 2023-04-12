@@ -1,0 +1,12 @@
+.wrapper{
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.detail{
+  margin-top: 10px;
+}
+
+h2{
+  text-align: center;
+}
