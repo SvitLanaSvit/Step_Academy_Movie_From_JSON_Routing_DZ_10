@@ -7,15 +7,13 @@ import { Film } from './film';
 })
 export class HttpService {
   movieName: string = '';
-  movie: any = null;
+  // movie: any = null;
   apiKey: string = 'baea9773';
 
   constructor(private http: HttpClient) { }
   getMovie(){
     console.log("getMovie by service" + " " + this.movieName);
     const url = `http://www.omdbapi.com/?t=${this.movieName}&apikey=${this.apiKey}`;
-    this.http.get(url).subscribe((data: any)=>{
-      this.movie = data;
-    });
+    return this.http.get(url);
   }
 }
